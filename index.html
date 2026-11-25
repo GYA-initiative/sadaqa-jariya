@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>نور الهداية — صدقة جارية</title>
-<meta name="description" content="نور الهداية — موقع إسلامي مجاني صدقة جارية: القرآن الكريم بصوت ٢٠ قارئًا، أذكار الصباح والمساء، مواقيت الصلاة، اتجاه القبلة، أسماء الله الحسنى، وعداد التسبيح.">
+<meta name="description" content="موقع للقرآن الكريم والأذكار والأدعية ومواقيت الصلاة، صدقة جارية على روح أحمد علي. اللهم اغفر له وارحمه.">
 <meta property="og:title" content="نور الهداية — صدقة جارية">
-<meta property="og:description" content="القرآن الكريم بصوت ٢٠ قارئًا، الأذكار والأدعية، مواقيت الصلاة، اتجاه القبلة، أسماء الله الحسنى — مجانًا كصدقة جارية.">
+<meta property="og:description" content="موقع للقرآن الكريم والأذكار والأدعية ومواقيت الصلاة، صدقة جارية على روح أحمد علي. اللهم اغفر له وارحمه.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap">
 <style>
@@ -112,7 +112,7 @@ body>*{display:none!important}
 
 <div class="view" id="home">
 <div class="bar" style="position:relative;z-index:3">
-<div style="line-height:1.25"><span class="brand">نور الهداية</span><div style="font-size:12px;font-weight:400;color:var(--mut)">قرآن • أذكار • مواقيت صلاة • قبلة — صدقة جارية</div></div>
+<div style="line-height:1.25"><span class="brand">نور الهداية</span><div style="font-size:12px;font-weight:400;color:var(--mut)">قرآن • أذكار • مواقيت صلاة • قبلة<br>صدقة جارية على روح أحمد علي، اللهم اغفر له وارحمه</div></div>
 <div class="grp">
 <button class="ib" data-go="mushaf" aria-label="بحث"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></button>
 <button class="ib" data-tab="fav" aria-label="المفضلة"><svg viewBox="0 0 24 24"><path d="M7 3h10v18l-5-4-5 4z"/></svg></button>
@@ -160,7 +160,7 @@ body>*{display:none!important}
 </div></div>
 
 <div class="pane" id="p-pray" hidden>
-<div class="card" style="display:block;text-align:center"><div style="color:var(--mut);font-size:15px">الصلاة القادمة</div><div style="font:700 36px Amiri,serif;color:var(--gold)" id="nn"></div><div style="font-size:26px;font-variant-numeric:tabular-nums" id="nc"></div></div>
+<div class="card" style="display:block;text-align:center"><div style="color:var(--mut);font-size:15px">الصلاة القادمة</div><div style="font:700 36px Amiri,serif;color:var(--gold)" id="nn"></div><div style="color:var(--mut);font-size:14px;font-weight:400">المتبقي حتى الأذان</div><div style="font-size:26px;font-variant-numeric:tabular-nums" id="nc"></div></div>
 <div class="card" style="display:block" id="times"></div>
 <div class="ctl"><select id="city" aria-label="المدينة"></select><button class="b p" id="gps">موقعي</button><select id="method" aria-label="طريقة الحساب"><option value="egy">الهيئة المصرية</option><option value="mwl">رابطة العالم الإسلامي</option><option value="umq">أم القرى</option></select></div>
 <p class="note">المواقيت محسوبة فلكيًا حسب موقعك وطريقة الحساب، وقد تختلف بدقائق عن التقويم المحلي. تأكد من جهة الإفتاء في بلدك.</p></div>
@@ -303,7 +303,7 @@ function tab(n){
 
 /* أقسام وبطاقة وكتيب الأذكار */
 function azsecFill(){$$("#azsec [data-cnt]").forEach(el=>{const n=AD[el.dataset.cnt][1].length;el.textContent=n+" أذكار"});$$("#azsec [data-dcnt]").forEach(el=>{el.textContent=(DU["للوالدين والأحباب"]||[]).length+" أدعية"})}
-function buildBook(){if(buildBook.d)return;buildBook.d=1;let h='<h1>كتيب الأذكار</h1><div class="bm" style="margin-bottom:18px">نور الهداية — أذكار من القرآن والسنة الصحيحة مع مصادرها</div>';
+function buildBook(){if(buildBook.d)return;buildBook.d=1;let h='<h1>كتيب الأذكار</h1><div class="bm" style="margin-bottom:18px">نور الهداية — صدقة جارية على روح أحمد علي، اللهم اغفر له وارحمه — أذكار من القرآن والسنة الصحيحة مع مصادرها</div>';
 ["m","e","p","s","w","rq","rs","k"].forEach(k=>{h+=`<h2>${AD[k][0]}</h2>`+(ADN[k]?`<div class="bm" style="margin:0 0 12px">${ADN[k]}</div>`:"");
 AD[k][1].forEach(z=>{h+=`<p class="bi">${z[0]}</p><div class="bm">التكرار: ${z[1]}${z[1]>1?" مرات":" مرة"} — ${z[2]}</div>`})});
 $("#bkc").innerHTML=h}
@@ -327,7 +327,7 @@ x.strokeStyle="rgba(255,255,255,.08)";x.lineWidth=1;x.beginPath();x.moveTo(140,y
 if(y>H-170)break}
 x.textAlign="center";x.font="400 26px 'IBM Plex Sans Arabic',sans-serif";
 if(d[1].length>max){x.fillStyle="#9a958c";x.fillText("وبقية الأذكار في قسم «"+d[0]+"» داخل التطبيق",W/2,H-108)}
-x.fillStyle="#8b8578";x.fillText("صدقة جارية — انشرها تؤجر",W/2,H-62)}
+x.fillStyle="#8b8578";x.fillText("صدقة جارية على روح أحمد علي — انشرها تؤجر",W/2,H-62)}
 function initCard(){if(!$("#ck").options.length){Object.keys(AD).forEach(k=>$("#ck").add(new Option(AD[k][0],k)));$("#ck").value="mx"}drawCard()}
 $("#ck").onchange=drawCard;
 $("#cdl").onclick=()=>$("#cvs").toBlob(b=>{const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="azkar-card.png";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),4000)},"image/png");
@@ -355,10 +355,13 @@ const AY=["أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱ�
 let nt=0;
 function render(){
   const now=Date.now(),[y,m,d]=ymd(now,loc.tz),mt=MT[method],T=calc(y,m,d,loc.lat,loc.lon,mt),T2=calc(y,m,d+1,loc.lat,loc.lon,mt);
-  const f=new Intl.DateTimeFormat("en-GB",{timeZone:loc.tz,hour:"2-digit",minute:"2-digit",hour12:false});
+  const f24=new Intl.DateTimeFormat("en-GB",{timeZone:loc.tz,hour:"2-digit",minute:"2-digit",hour12:false});
+  const parts=ms=>{const[a,b]=f24.format(ms).split(":");let h=+a;return[h%12||12,b,h<12]};
+  const f={format(ms){const[h,m,am]=parts(ms);return h+":"+m+(am?" صباحًا":" مساءً")}};
+  const fs={format(ms){const[h,m,am]=parts(ms);return h+":"+m+(am?" ص":" م")}};
   const keys=Object.keys(NM);let nx=keys.filter(k=>k!=="sunrise").find(k=>T[k]>now);nt=nx?T[nx]:T2.fajr;nx=nx||"fajr";
   $("#times").innerHTML=keys.map(k=>`<div class="row${k===nx?" on":""}"><span>${NM[k]}</span><span>${f.format(T[k])}</span></div>`).join("");
-  $("#nn").textContent=NM[nx];$("#hf").textContent="الفجر "+f.format(T.fajr);$("#hs").textContent="الشروق "+f.format(T.sunrise);
+  $("#nn").textContent=NM[nx];$("#hf").textContent="الفجر "+fs.format(T.fajr);$("#hs").textContent="الشروق "+fs.format(T.sunrise);
   const hd=n=>new Intl.DateTimeFormat("ar-SA-u-ca-islamic-umalqura",{timeZone:loc.tz,...n}).format(now);
   $("#hj").innerHTML=`<b>${hd({day:"numeric"})}</b>${hd({month:"long"})}`;
   const past=["fajr","dhuhr","asr","maghrib","isha"].filter(k=>T[k]<=now).pop();
