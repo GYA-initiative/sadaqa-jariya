@@ -317,12 +317,12 @@ x.direction="rtl";x.textAlign="center";
 x.fillStyle="#D9B26A";x.font="700 60px Amiri,serif";x.fillText("نور الهداية",W/2,130);
 x.font="400 34px 'IBM Plex Sans Arabic',sans-serif";x.fillStyle="#E9E4DA";x.fillText(d[0],W/2,195);
 x.strokeStyle="rgba(217,178,106,.6)";x.lineWidth=2;x.beginPath();x.moveTo(180,225);x.lineTo(W-180,225);x.stroke();
-const max=6;let y=290;x.textAlign="right";
+const max=4;let y=290;x.textAlign="right";
 for(const z of d[1].slice(0,max)){
-x.font="400 36px Amiri,serif";x.fillStyle="#F4F1E8";
-for(const ln of wrapCv(x,z[0],W-200)){if(y>H-170)break;x.fillText(ln,W-100,y);y+=58}
-if(z[1]>1&&y<H-170){x.font="600 26px 'IBM Plex Sans Arabic',sans-serif";x.fillStyle="#D9B26A";x.fillText("× "+z[1],W-100,y+6);y+=10}
-y+=40;
+x.font="400 31px Amiri,serif";x.fillStyle="#F4F1E8";
+for(const ln of wrapCv(x,z[0],W-200)){if(y>H-200)break;x.fillText(ln,W-100,y);y+=48}
+if(y<H-200){x.font="400 24px 'IBM Plex Sans Arabic',sans-serif";x.fillStyle="#9a958c";x.fillText((z[1]>1?"×"+z[1]+" — ":"")+z[2],W-100,y+2);y+=32}
+y+=16;
 x.strokeStyle="rgba(255,255,255,.08)";x.lineWidth=1;x.beginPath();x.moveTo(140,y-20);x.lineTo(W-140,y-20);x.stroke();
 if(y>H-170)break}
 x.textAlign="center";x.font="400 26px 'IBM Plex Sans Arabic',sans-serif";
