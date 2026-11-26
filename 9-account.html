@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://*.supabase.co; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'">
+<meta name="referrer" content="no-referrer">
+<title>حسابي | نور الهداية</title>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="index.html">→ رجوع للموقع</a></div>
+  <h1>حسابي</h1>
+  <p class="sub">الحساب اختياري. القرآن والأذكار متاحة للجميع بدون تسجيل.</p>
+
+  <div id="guest" hidden>
+    <div class="card" style="border-color:var(--gold)">الحساب أفضل: يحفظ آخر موضع قراءة ومفضلاتك وتسبيحك على كل أجهزتك.</div>
+    <div class="card">
+      <div class="tabs"><button id="tabIn" class="on" type="button">دخول</button><button id="tabUp" type="button">حساب جديد</button></div>
+      <form id="form" autocomplete="on">
+        <div id="nameRow" hidden><label for="name">الاسم</label><input id="name" maxlength="60" autocomplete="name"></div>
+        <label for="email">البريد الإلكتروني</label><input id="email" type="email" required autocomplete="email" dir="ltr">
+        <label for="pw">كلمة المرور (١٠ حروف على الأقل)</label><input id="pw" type="password" required minlength="10" autocomplete="current-password" dir="ltr">
+        <div id="consentRow" hidden><label style="display:flex;gap:8px;align-items:flex-start;color:var(--ink)"><input id="consent" type="checkbox" style="width:auto;margin-top:6px"><span>أوافق على حفظ اسمي وبريدي وتفضيلاتي لتشغيل الحساب فقط. لا نبيع البيانات ولا نشاركها، ويمكنني حذف حسابي في أي وقت.</span></label></div>
+        <button id="submit" type="submit">دخول</button>
+        <button id="forgot" class="ghost" type="button">نسيت كلمة المرور</button>
+        <div id="gmsg" class="msg" role="status"></div>
+      </form>
+    </div>
+  </div>
+
+  <div id="member" hidden>
+    <div class="card">
+      <div id="hello" style="font-size:20px"></div>
+      <div class="note" id="mail" dir="ltr" style="text-align:right"></div>
+      <label for="dn">الاسم</label><input id="dn" maxlength="60">
+      <button id="saveName" type="button">حفظ الاسم</button>
+      <div id="mmsg" class="msg" role="status"></div>
+    </div>
+    <div class="card">
+      <div>آخر موضع قراءة محفوظ</div>
+      <div id="lastRead" class="note">لا يوجد بعد.</div>
+    </div>
+    <div class="card">
+      <button id="out" class="ghost" type="button">تسجيل خروج</button>
+      <button id="del" class="danger" type="button">حذف حسابي وكل بياناتي</button>
+    </div>
+  </div>
+</div>
+<script src="supabase.js"></script>
+<script src="config.js"></script>
+<script src="account.js"></script>
+</body>
+</html>
