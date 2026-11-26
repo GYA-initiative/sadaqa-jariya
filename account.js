@@ -23,9 +23,10 @@
       if(mode==="up"){
         if(!$("consent").checked){say($("gmsg"),"لازم توافق على شرط حفظ البيانات.");return}
         if(pw.length<10){say($("gmsg"),"كلمة المرور قصيرة.");return}
-        const {error}=await sb.auth.signUp({email,password:pw,options:{data:{name:$("name").value.trim().slice(0,60)},emailRedirectTo:location.origin+location.pathname}});
+        const {data:su,error}=await sb.auth.signUp({email,password:pw,options:{data:{name:$("name").value.trim().slice(0,60)},emailRedirectTo:location.origin+location.pathname}});
         if(error)return say($("gmsg"),err(error));
-        say($("gmsg"),"تم. افتح بريدك واضغط رابط التأكيد ثم ادخل.",true);
+        if(su&&su.session){show();return}
+        say($("gmsg"),"تم إنشاء الحساب. سجّل دخول الآن.",true);
       }else{
         const {error}=await sb.auth.signInWithPassword({email,password:pw});
         if(error)return say($("gmsg"),err(error));
